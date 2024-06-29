@@ -11,6 +11,32 @@
 		916B49A62C2FFA67006E06B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49A52C2FFA67006E06B0 /* ContentView.swift */; };
 		916B49A82C2FFA68006E06B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49A72C2FFA68006E06B0 /* Assets.xcassets */; };
 		916B49AB2C2FFA68006E06B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49AA2C2FFA68006E06B0 /* Preview Assets.xcassets */; };
+		916B49B62C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 916B49B52C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig */; };
+		916B49B82C2FFBB9006E06B0 /* ShareLife_Pro.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 916B49B72C2FFBB9006E06B0 /* ShareLife_Pro.xcconfig */; };
+		916B49BD2C2FFDB2006E06B0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */; };
+		916B49BF2C2FFDCC006E06B0 /* Colors+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49BE2C2FFDCC006E06B0 /* Colors+Utils.swift */; };
+		916B49C32C2FFE3D006E06B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49C22C2FFE3D006E06B0 /* MainView.swift */; };
+		916B49C62C300415006E06B0 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49C52C300415006E06B0 /* NotesView.swift */; };
+		916B49C92C3004F2006E06B0 /* FontNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49C82C3004F2006E06B0 /* FontNames.swift */; };
+		916B49DD2C300530006E06B0 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49CB2C300530006E06B0 /* Poppins-ExtraLight.ttf */; };
+		916B49DE2C300530006E06B0 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49CC2C300530006E06B0 /* Poppins-Light.ttf */; };
+		916B49DF2C300530006E06B0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49CD2C300530006E06B0 /* Poppins-Medium.ttf */; };
+		916B49E02C300530006E06B0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49CE2C300530006E06B0 /* Poppins-SemiBold.ttf */; };
+		916B49E12C300530006E06B0 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49CF2C300530006E06B0 /* Poppins-Thin.ttf */; };
+		916B49E22C300530006E06B0 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D02C300530006E06B0 /* Poppins-ThinItalic.ttf */; };
+		916B49E32C300530006E06B0 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D12C300530006E06B0 /* Poppins-Regular.ttf */; };
+		916B49E42C300530006E06B0 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D22C300530006E06B0 /* Poppins-Bold.ttf */; };
+		916B49E52C300530006E06B0 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D32C300530006E06B0 /* Poppins-Black.ttf */; };
+		916B49E62C300530006E06B0 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D42C300530006E06B0 /* Poppins-BlackItalic.ttf */; };
+		916B49E72C300530006E06B0 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D52C300530006E06B0 /* Poppins-ExtraLightItalic.ttf */; };
+		916B49E82C300530006E06B0 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D62C300530006E06B0 /* Poppins-Italic.ttf */; };
+		916B49E92C300530006E06B0 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D72C300530006E06B0 /* Poppins-LightItalic.ttf */; };
+		916B49EA2C300530006E06B0 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D82C300530006E06B0 /* Poppins-MediumItalic.ttf */; };
+		916B49EB2C300530006E06B0 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49D92C300530006E06B0 /* Poppins-SemiBoldItalic.ttf */; };
+		916B49EC2C300530006E06B0 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49DA2C300530006E06B0 /* Poppins-BoldItalic.ttf */; };
+		916B49ED2C300530006E06B0 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49DB2C300530006E06B0 /* Poppins-ExtraBold.ttf */; };
+		916B49EE2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */; };
+		916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49F02C30083E006E06B0 /* View+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +45,33 @@
 		916B49A52C2FFA67006E06B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		916B49A72C2FFA68006E06B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		916B49AA2C2FFA68006E06B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		916B49B52C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ShareLife_Dev.xcconfig; sourceTree = "<group>"; };
+		916B49B72C2FFBB9006E06B0 /* ShareLife_Pro.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ShareLife_Pro.xcconfig; sourceTree = "<group>"; };
+		916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		916B49BE2C2FFDCC006E06B0 /* Colors+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Utils.swift"; sourceTree = "<group>"; };
+		916B49C22C2FFE3D006E06B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		916B49C52C300415006E06B0 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		916B49C82C3004F2006E06B0 /* FontNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontNames.swift; sourceTree = "<group>"; };
+		916B49CB2C300530006E06B0 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		916B49CC2C300530006E06B0 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		916B49CD2C300530006E06B0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		916B49CE2C300530006E06B0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		916B49CF2C300530006E06B0 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		916B49D02C300530006E06B0 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		916B49D12C300530006E06B0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		916B49D22C300530006E06B0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		916B49D32C300530006E06B0 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		916B49D42C300530006E06B0 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		916B49D52C300530006E06B0 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		916B49D62C300530006E06B0 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		916B49D72C300530006E06B0 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		916B49D82C300530006E06B0 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		916B49D92C300530006E06B0 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		916B49DA2C300530006E06B0 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		916B49DB2C300530006E06B0 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		916B49EF2C3006AF006E06B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		916B49F02C30083E006E06B0 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +104,16 @@
 		916B49A22C2FFA67006E06B0 /* ShareLife */ = {
 			isa = PBXGroup;
 			children = (
-				916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */,
-				916B49A52C2FFA67006E06B0 /* ContentView.swift */,
 				916B49A72C2FFA68006E06B0 /* Assets.xcassets */,
+				916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */,
+				916B49B12C2FFB51006E06B0 /* Configuration */,
+				916B49A52C2FFA67006E06B0 /* ContentView.swift */,
+				916B49B92C2FFD4E006E06B0 /* Extensions */,
+				916B49C72C3004E9006E06B0 /* Fonts */,
+				916B49EF2C3006AF006E06B0 /* Info.plist */,
 				916B49A92C2FFA68006E06B0 /* Preview Content */,
+				916B49C02C2FFE2C006E06B0 /* Screens */,
+				916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */,
 			);
 			path = ShareLife;
 			sourceTree = "<group>";
@@ -65,6 +124,91 @@
 				916B49AA2C2FFA68006E06B0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		916B49B12C2FFB51006E06B0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				916B49B22C2FFB5B006E06B0 /* XCConfiguration */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		916B49B22C2FFB5B006E06B0 /* XCConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				916B49B52C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig */,
+				916B49B72C2FFBB9006E06B0 /* ShareLife_Pro.xcconfig */,
+			);
+			path = XCConfiguration;
+			sourceTree = "<group>";
+		};
+		916B49B92C2FFD4E006E06B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				916B49BE2C2FFDCC006E06B0 /* Colors+Utils.swift */,
+				916B49F02C30083E006E06B0 /* View+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		916B49C02C2FFE2C006E06B0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				916B49C42C30040C006E06B0 /* NotesView */,
+				916B49C12C2FFE32006E06B0 /* MainView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		916B49C12C2FFE32006E06B0 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				916B49C22C2FFE3D006E06B0 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		916B49C42C30040C006E06B0 /* NotesView */ = {
+			isa = PBXGroup;
+			children = (
+				916B49C52C300415006E06B0 /* NotesView.swift */,
+			);
+			path = NotesView;
+			sourceTree = "<group>";
+		};
+		916B49C72C3004E9006E06B0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				916B49CA2C3004FD006E06B0 /* Sources */,
+				916B49C82C3004F2006E06B0 /* FontNames.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		916B49CA2C3004FD006E06B0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				916B49D32C300530006E06B0 /* Poppins-Black.ttf */,
+				916B49D42C300530006E06B0 /* Poppins-BlackItalic.ttf */,
+				916B49D22C300530006E06B0 /* Poppins-Bold.ttf */,
+				916B49DA2C300530006E06B0 /* Poppins-BoldItalic.ttf */,
+				916B49DB2C300530006E06B0 /* Poppins-ExtraBold.ttf */,
+				916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */,
+				916B49CB2C300530006E06B0 /* Poppins-ExtraLight.ttf */,
+				916B49D52C300530006E06B0 /* Poppins-ExtraLightItalic.ttf */,
+				916B49D62C300530006E06B0 /* Poppins-Italic.ttf */,
+				916B49CC2C300530006E06B0 /* Poppins-Light.ttf */,
+				916B49D72C300530006E06B0 /* Poppins-LightItalic.ttf */,
+				916B49CD2C300530006E06B0 /* Poppins-Medium.ttf */,
+				916B49D82C300530006E06B0 /* Poppins-MediumItalic.ttf */,
+				916B49D12C300530006E06B0 /* Poppins-Regular.ttf */,
+				916B49CE2C300530006E06B0 /* Poppins-SemiBold.ttf */,
+				916B49D92C300530006E06B0 /* Poppins-SemiBoldItalic.ttf */,
+				916B49CF2C300530006E06B0 /* Poppins-Thin.ttf */,
+				916B49D02C300530006E06B0 /* Poppins-ThinItalic.ttf */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +269,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916B49E72C300530006E06B0 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				916B49E82C300530006E06B0 /* Poppins-Italic.ttf in Resources */,
+				916B49DE2C300530006E06B0 /* Poppins-Light.ttf in Resources */,
+				916B49DD2C300530006E06B0 /* Poppins-ExtraLight.ttf in Resources */,
+				916B49EA2C300530006E06B0 /* Poppins-MediumItalic.ttf in Resources */,
+				916B49EB2C300530006E06B0 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				916B49BD2C2FFDB2006E06B0 /* Colors.xcassets in Resources */,
+				916B49E32C300530006E06B0 /* Poppins-Regular.ttf in Resources */,
+				916B49E22C300530006E06B0 /* Poppins-ThinItalic.ttf in Resources */,
+				916B49EC2C300530006E06B0 /* Poppins-BoldItalic.ttf in Resources */,
+				916B49E92C300530006E06B0 /* Poppins-LightItalic.ttf in Resources */,
+				916B49B82C2FFBB9006E06B0 /* ShareLife_Pro.xcconfig in Resources */,
 				916B49AB2C2FFA68006E06B0 /* Preview Assets.xcassets in Resources */,
+				916B49E62C300530006E06B0 /* Poppins-BlackItalic.ttf in Resources */,
+				916B49DF2C300530006E06B0 /* Poppins-Medium.ttf in Resources */,
+				916B49E42C300530006E06B0 /* Poppins-Bold.ttf in Resources */,
+				916B49E02C300530006E06B0 /* Poppins-SemiBold.ttf in Resources */,
+				916B49E52C300530006E06B0 /* Poppins-Black.ttf in Resources */,
+				916B49ED2C300530006E06B0 /* Poppins-ExtraBold.ttf in Resources */,
+				916B49B62C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig in Resources */,
 				916B49A82C2FFA68006E06B0 /* Assets.xcassets in Resources */,
+				916B49EE2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				916B49E12C300530006E06B0 /* Poppins-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				916B49A62C2FFA67006E06B0 /* ContentView.swift in Sources */,
+				916B49C32C2FFE3D006E06B0 /* MainView.swift in Sources */,
+				916B49C62C300415006E06B0 /* NotesView.swift in Sources */,
+				916B49BF2C2FFDCC006E06B0 /* Colors+Utils.swift in Sources */,
+				916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */,
 				916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */,
+				916B49C92C3004F2006E06B0 /* FontNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +317,7 @@
 /* Begin XCBuildConfiguration section */
 		916B49AC2C2FFA68006E06B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 916B49B52C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -197,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -210,6 +381,7 @@
 		};
 		916B49AD2C2FFA68006E06B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 916B49B72C2FFBB9006E06B0 /* ShareLife_Pro.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -254,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -266,6 +438,7 @@
 		};
 		916B49AF2C2FFA68006E06B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 916B49B52C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -275,6 +448,7 @@
 				DEVELOPMENT_TEAM = 82A5792UM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareLife/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,16 +459,21 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pablofu9.ShareLife;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(CONFIG_APP_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		916B49B02C2FFA68006E06B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 916B49B72C2FFBB9006E06B0 /* ShareLife_Pro.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -304,6 +483,7 @@
 				DEVELOPMENT_TEAM = 82A5792UM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareLife/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,11 +494,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pablofu9.ShareLife;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(CONFIG_APP_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
