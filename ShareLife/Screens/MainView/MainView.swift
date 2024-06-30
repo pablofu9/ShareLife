@@ -17,7 +17,7 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             Group {
-                NotesView()
+                NotesView(notes: Note.mock)
                     .tabItem {
                         Image(systemName: "note.text")
                         Text("Notes")

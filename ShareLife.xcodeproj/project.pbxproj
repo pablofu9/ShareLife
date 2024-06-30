@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C566F2C31594500ABEA7A /* NoteRowView.swift */; };
+		914C56742C31596600ABEA7A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C56732C31596600ABEA7A /* Note.swift */; };
+		914C56772C31654200ABEA7A /* OpenNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C56762C31654200ABEA7A /* OpenNoteView.swift */; };
 		916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */; };
 		916B49A62C2FFA67006E06B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49A52C2FFA67006E06B0 /* ContentView.swift */; };
 		916B49A82C2FFA68006E06B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49A72C2FFA68006E06B0 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		914C566F2C31594500ABEA7A /* NoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRowView.swift; sourceTree = "<group>"; };
+		914C56732C31596600ABEA7A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		914C56762C31654200ABEA7A /* OpenNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNoteView.swift; sourceTree = "<group>"; };
 		916B49A02C2FFA67006E06B0 /* ShareLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLifeApp.swift; sourceTree = "<group>"; };
 		916B49A52C2FFA67006E06B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		914C566E2C31593900ABEA7A /* NoteRowView */ = {
+			isa = PBXGroup;
+			children = (
+				914C566F2C31594500ABEA7A /* NoteRowView.swift */,
+			);
+			path = NoteRowView;
+			sourceTree = "<group>";
+		};
+		914C56712C31594B00ABEA7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				914C56722C31595D00ABEA7A /* Notes */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		914C56722C31595D00ABEA7A /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				914C56732C31596600ABEA7A /* Note.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		914C56752C31653700ABEA7A /* OpenNoteView */ = {
+			isa = PBXGroup;
+			children = (
+				914C56762C31654200ABEA7A /* OpenNoteView.swift */,
+			);
+			path = OpenNoteView;
+			sourceTree = "<group>";
+		};
 		916B49972C2FFA67006E06B0 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +142,7 @@
 		916B49A22C2FFA67006E06B0 /* ShareLife */ = {
 			isa = PBXGroup;
 			children = (
+				914C56712C31594B00ABEA7A /* Model */,
 				916B49A72C2FFA68006E06B0 /* Assets.xcassets */,
 				916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */,
 				916B49B12C2FFB51006E06B0 /* Configuration */,
@@ -172,6 +211,8 @@
 		916B49C42C30040C006E06B0 /* NotesView */ = {
 			isa = PBXGroup;
 			children = (
+				914C56752C31653700ABEA7A /* OpenNoteView */,
+				914C566E2C31593900ABEA7A /* NoteRowView */,
 				916B49C52C300415006E06B0 /* NotesView.swift */,
 			);
 			path = NotesView;
@@ -306,7 +347,10 @@
 				916B49C32C2FFE3D006E06B0 /* MainView.swift in Sources */,
 				916B49C62C300415006E06B0 /* NotesView.swift in Sources */,
 				916B49BF2C2FFDCC006E06B0 /* Colors+Utils.swift in Sources */,
+				914C56772C31654200ABEA7A /* OpenNoteView.swift in Sources */,
 				916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */,
+				914C56742C31596600ABEA7A /* Note.swift in Sources */,
+				914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */,
 				916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */,
 				916B49C92C3004F2006E06B0 /* FontNames.swift in Sources */,
 			);
