@@ -11,21 +11,14 @@ import RealmSwift
 struct MainView: View {
     
     @State var tabOptionPressed: Int = 0
-    @StateObject var realmManager = NoteRealManager()
-
-    @ObservedRealmObject var notes = RealmNotes()
-    @ObservedResults(RealmNotes.self) var allNotesGroup
     @StateObject var mainTabBarManager = TabBarManager<MainTab>()
+    @ObservedResults(RealmNote.self) var rNotes
+    @EnvironmentObject var errorHandler: ErrorHandler
+    @State var user: User
 
     var body: some View {
         content
-            .onAppear {
-                if allNotesGroup.first == nil {
-                    $allNotesGroup.append(RealmNotes())
-                }
-            }
                    
-       
     }
     
     @ViewBuilder
@@ -43,12 +36,7 @@ struct MainView: View {
     private func getView(tab: Int) -> some View {
         switch tab {
         case 0:
-            if let notes = allNotesGroup.first {
-                
-                NotesView(realmNotes: notes)
-                    .environmentObject(realmManager)
-                
-            }
+            NotesView(user: user)
         case 1:
             EmptyView()
         case 2:
@@ -62,6 +50,3 @@ struct MainView: View {
 
 
 
-#Preview {
-    MainView()
-}

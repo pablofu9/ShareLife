@@ -7,18 +7,21 @@
 
 import SwiftUI
 import RealmSwift
+
 struct AddNoteView: View {
     
-    @EnvironmentObject var realManager: NoteRealManager
     @State var title: String = ""
     @State var message: String = ""
     @Environment(\.dismiss) var dismiss
-
-    @ObservedRealmObject var realmNotes: RealmNotes
-
+    @State var user: User
+    @ObservedResults(RealmNote.self) var notes
+    // Create a new Realm Item object.
+    var note: RealmNote? 
+    
+    @State private var newNote = RealmNote()
     var body: some View {
         VStack {
-            if let selectedNote = realManager.selectedNote {
+            if let selectedNote = note {
                 HStack {
                     Text(selectedNote.date)
                         .font(.custom(FontNames.kPoppinsThin, size: 20))
@@ -46,9 +49,11 @@ struct AddNoteView: View {
             
         }
         .onAppear {
-            if let selectedNote = realManager.selectedNote {
-                title = selectedNote.title
-                message = selectedNote.message
+            DispatchQueue.main.async {
+                if let selectedNote = note {
+                    title = selectedNote.title
+                    message = selectedNote.message
+                }
             }
         }
         .padding(.vertical, 50)
@@ -108,55 +113,53 @@ extension AddNoteView {
     // MARK: PRIVATE FUNCTIONS
     
     private func addOrUpdateNote() {
-        if let selectedNote = realManager.selectedNote {
+        if let selectedNote = note {
             updateNote(selectedNote: selectedNote)
         } else {
             addNewNote()
         }
+        dismiss()
     }
     
     private func updateNote(selectedNote: RealmNote) {
         withAnimation(.snappy) {
-            if let index = $realmNotes.notes.firstIndex(where: { $0.id == selectedNote.id }) {
-                try! realManager.localRealm?.write({
-                    realmNotes.notes[index].thaw()?.title = title
-                    realmNotes.notes[index].thaw()?.message = message
-                    realmNotes.notes[index].thaw()?.date = DateTimeManager.shared.getCurrentDate()
-                    realmNotes.notes[index].thaw()?.shouldOccupyFullWidth = message.count > 30 ? true : false
-                })
-            }
+                if let noteToModify = notes.first(where: { $0.id == selectedNote.id }) {
+                    noteToModify.thaw()?.title = title
+                    noteToModify.thaw()?.message = message
+                    noteToModify.thaw()?.date = DateTimeManager.shared.getCurrentDate()
+                    noteToModify.thaw()?.shouldOccupyFullWidth = message.count > 30 ? true : false
+                    notes.realm?.add(noteToModify, update: .modified)
+                }
                 dismiss()
             }
+            dismiss()
+        
     }
+
     
     private func addNewNote() {
         withAnimation(.snappy) {
             if !title.isEmpty || !message.isEmpty {
-                $realmNotes.notes.append(RealmNote(title: title, message: message, shouldOccupyFullWidth: message.count > 30 ? true : false, date: DateTimeManager.shared.getCurrentDate()))
-                
+                newNote.ownerId = user.id
+                newNote.title = title
+                newNote.message = message
+                newNote.date = DateTimeManager.shared.getCurrentDate()
+                newNote.shouldOccupyFullWidth = message.count > 30 ? true : false
+                $notes.append(newNote)
             }
             dismiss()
         }
     }
     
     private func deleteNote() {
-        if let selectedNote = realManager.selectedNote {
-            if let index = $realmNotes.notes.firstIndex(where: { $0.id == selectedNote.id }) {
-                $realmNotes.notes.remove(at: index)
+        if let selectedNote = note {
+            if let noteToRemove = notes.first(where: { $0.id == selectedNote.id }) {
+                $notes.remove(noteToRemove)
             }
-            
             dismiss()
         }
     }
 }
 
 
-struct AddNoteView_Preview: PreviewProvider {
-    static var previews: some View {
-        let realm = realmWithData()
-        return AddNoteView(realmNotes: realm.objects(RealmNotes.self).first!)
-            .environment(\.realm, realm)
-            .environmentObject(NoteRealManager())
-    }
-}
 

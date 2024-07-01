@@ -13,19 +13,20 @@ struct NotesView: View {
     // MARK: PROPERTIES
     
     @State private var columns: Int = 2
+    
     private var columnGrid: [GridItem] {
         [GridItem(.adaptive(minimum: UIScreen.main.bounds.width / 2.5))]
     }
-    @EnvironmentObject var realmManager: NoteRealManager
     @State private var isWideMode: Bool = false
     @State var openDetail: Bool = false
     @State var openNewNote: Bool = false
     @State var editNote: Bool = false
     @State var selectedNote: RealmNote?
     @State var search = ""
-    @ObservedRealmObject var realmNotes: RealmNotes
     @State var half: Bool = false
-    
+    @ObservedResults(RealmNote.self, sortDescriptor: SortDescriptor(keyPath: "_id", ascending: true)) var notes
+    @State var user: User
+
 
     // MARK: BODY
     
@@ -33,12 +34,12 @@ struct NotesView: View {
         
         NavigationStack {
             ZStack {
-                if realmNotes.notes.isEmpty {
+                if notes.isEmpty {
                     noNotesView
                 } else {
                     scrollNotesView
-                    
                 }
+                
                 VStack {
                     Spacer()
                     HStack {
@@ -55,13 +56,13 @@ struct NotesView: View {
             .background(Color.customWhiteColor)
         }
         .sheet(isPresented: $openNewNote) {
-            AddNoteView(realmNotes: realmNotes)
-                .environmentObject(realmManager)
+            AddNoteView(user: user)
             
         }
         .sheet(isPresented: $editNote, content: {
-            AddNoteView(realmNotes: realmNotes)
-                .environmentObject(realmManager)
+            if let selectedNote = selectedNote {
+                AddNoteView(user: user, note: selectedNote)
+            }
             
         })
     }
@@ -75,7 +76,7 @@ extension NotesView {
     private var addNoteButton: some View {
         Button {
             withAnimation(.snappy) {
-                realmManager.selectedNote = nil
+              
                 openNewNote = true
             }
         } label: {
@@ -124,16 +125,30 @@ extension NotesView {
         ScrollView(showsIndicators: false) {
             
             LazyVGrid(columns: columnGrid, spacing: 20) {
-                ForEach(realmNotes.notes) { note in
+                ForEach(notes, id: \.self) { note in
                     
                     if note.shouldOccupyFullWidth {
                         Section {
                             
                         } header: {
-                            NoteRowView(note: note, editNote: $editNote)
+                            NoteRowView(note: note)
+                                .onTapGesture {
+                                    DispatchQueue.main.async {
+                                        
+                                        editNote = true
+                                        selectedNote = note
+                                    }
+                                }
                         }
                     } else {
-                        NoteRowView(note: note, editNote: $editNote)
+                        NoteRowView(note: note)
+                            .onTapGesture {
+                                DispatchQueue.main.async {
+                                    
+                                    editNote = true
+                                    selectedNote = note
+                                }
+                            }
                     }
                     
                 }
@@ -167,12 +182,3 @@ extension NotesView {
     }
 }
 
-
-struct NotesView_Previews: PreviewProvider {
-    static var previews: some View {
-        let realm = realmWithData()
-        return NotesView(realmNotes: realm.objects(RealmNotes.self).first!)
-            .environment(\.realm, realm)
-            .environmentObject(NoteRealManager())
-    }
-}

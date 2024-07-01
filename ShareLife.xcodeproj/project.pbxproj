@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911BD2F82C33342A00AA15A0 /* atlasConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911BD2F72C33342A00AA15A0 /* atlasConfig.plist */; };
+		911BD2FA2C3334E400AA15A0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911BD2F92C3334E400AA15A0 /* AppConfig.swift */; };
+		911BD2FD2C33362600AA15A0 /* OpenRealmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911BD2FC2C33362600AA15A0 /* OpenRealmView.swift */; };
+		911BD3002C33367700AA15A0 /* ApplicationSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911BD2FF2C33367700AA15A0 /* ApplicationSwitcher.swift */; };
+		911BD3032C3336A100AA15A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911BD3022C3336A100AA15A0 /* Constants.swift */; };
 		913CAF0E2C32A9EB0008EF1A /* Realm+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF0D2C32A9EB0008EF1A /* Realm+Previews.swift */; };
 		913CAF112C32F4210008EF1A /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF102C32F4210008EF1A /* TabBarManager.swift */; };
 		913CAF152C32F4610008EF1A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF142C32F4610008EF1A /* TabBarView.swift */; };
@@ -45,7 +50,6 @@
 		916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49F02C30083E006E06B0 /* View+Utils.swift */; };
 		91EFF3A52C31A5C600D58AD6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 91EFF3A42C31A5C600D58AD6 /* RealmSwift */; };
 		91EFF3A62C31A63300D58AD6 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 91EFF3A42C31A5C600D58AD6 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		91EFF3AB2C31A6D200D58AD6 /* NoteRealManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3AA2C31A6D200D58AD6 /* NoteRealManager.swift */; };
 		91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3AD2C31AC7200D58AD6 /* AddNoteView.swift */; };
 		91EFF3B12C31AD7800D58AD6 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3B02C31AD7800D58AD6 /* OvalTextFieldStyle.swift */; };
 		91EFF3B42C3217B400D58AD6 /* DateTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3B32C3217B400D58AD6 /* DateTimerManager.swift */; };
@@ -66,6 +70,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		911BD2F72C33342A00AA15A0 /* atlasConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = atlasConfig.plist; sourceTree = "<group>"; };
+		911BD2F92C3334E400AA15A0 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		911BD2FC2C33362600AA15A0 /* OpenRealmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRealmView.swift; sourceTree = "<group>"; };
+		911BD2FF2C33367700AA15A0 /* ApplicationSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSwitcher.swift; sourceTree = "<group>"; };
+		911BD3022C3336A100AA15A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		913CAF0D2C32A9EB0008EF1A /* Realm+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Previews.swift"; sourceTree = "<group>"; };
 		913CAF102C32F4210008EF1A /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
 		913CAF142C32F4610008EF1A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -104,7 +113,6 @@
 		916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		916B49EF2C3006AF006E06B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		916B49F02C30083E006E06B0 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
-		91EFF3AA2C31A6D200D58AD6 /* NoteRealManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRealManager.swift; sourceTree = "<group>"; };
 		91EFF3AD2C31AC7200D58AD6 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		91EFF3B02C31AD7800D58AD6 /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
 		91EFF3B32C3217B400D58AD6 /* DateTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimerManager.swift; sourceTree = "<group>"; };
@@ -122,6 +130,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		911BD2FB2C33361D00AA15A0 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				911BD2FC2C33362600AA15A0 /* OpenRealmView.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		911BD2FE2C33366A00AA15A0 /* ApplicationSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				911BD2FF2C33367700AA15A0 /* ApplicationSwitcher.swift */,
+			);
+			path = ApplicationSwitcher;
+			sourceTree = "<group>";
+		};
+		911BD3012C33369600AA15A0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				911BD3022C3336A100AA15A0 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		913CAF0F2C32F4170008EF1A /* TabBarManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +231,8 @@
 		916B49A22C2FFA67006E06B0 /* ShareLife */ = {
 			isa = PBXGroup;
 			children = (
+				911BD3012C33369600AA15A0 /* Utils */,
+				911BD2F72C33342A00AA15A0 /* atlasConfig.plist */,
 				913CAF122C32F4410008EF1A /* CommonViews */,
 				916B49A72C2FFA68006E06B0 /* Assets.xcassets */,
 				916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */,
@@ -212,6 +246,7 @@
 				916B49C02C2FFE2C006E06B0 /* Screens */,
 				916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */,
 				91EFF3AF2C31AD6D00D58AD6 /* Styles */,
+				911BD2F92C3334E400AA15A0 /* AppConfig.swift */,
 			);
 			path = ShareLife;
 			sourceTree = "<group>";
@@ -254,6 +289,8 @@
 		916B49C02C2FFE2C006E06B0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				911BD2FE2C33366A00AA15A0 /* ApplicationSwitcher */,
+				911BD2FB2C33361D00AA15A0 /* Realm */,
 				916B49C42C30040C006E06B0 /* NotesView */,
 				916B49C12C2FFE32006E06B0 /* MainView */,
 			);
@@ -317,17 +354,8 @@
 			children = (
 				913CAF0F2C32F4170008EF1A /* TabBarManager */,
 				91EFF3B22C32172400D58AD6 /* DateTimerManager */,
-				91EFF3A92C31A6C300D58AD6 /* NoteRealmManager */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		91EFF3A92C31A6C300D58AD6 /* NoteRealmManager */ = {
-			isa = PBXGroup;
-			children = (
-				91EFF3AA2C31A6D200D58AD6 /* NoteRealManager.swift */,
-			);
-			path = NoteRealmManager;
 			sourceTree = "<group>";
 		};
 		91EFF3AC2C31AC6500D58AD6 /* AddNoteView */ = {
@@ -441,6 +469,7 @@
 				916B49B62C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig in Resources */,
 				916B49A82C2FFA68006E06B0 /* Assets.xcassets in Resources */,
 				916B49EE2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				911BD2F82C33342A00AA15A0 /* atlasConfig.plist in Resources */,
 				916B49E12C300530006E06B0 /* Poppins-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,12 +490,15 @@
 				91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */,
 				91EFF3B12C31AD7800D58AD6 /* OvalTextFieldStyle.swift in Sources */,
 				914C56742C31596600ABEA7A /* Note.swift in Sources */,
+				911BD2FA2C3334E400AA15A0 /* AppConfig.swift in Sources */,
+				911BD2FD2C33362600AA15A0 /* OpenRealmView.swift in Sources */,
+				911BD3032C3336A100AA15A0 /* Constants.swift in Sources */,
 				913CAF1A2C32F5910008EF1A /* TabBarIconView.swift in Sources */,
-				91EFF3AB2C31A6D200D58AD6 /* NoteRealManager.swift in Sources */,
 				914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */,
 				916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */,
 				913CAF112C32F4210008EF1A /* TabBarManager.swift in Sources */,
 				913CAF0E2C32A9EB0008EF1A /* Realm+Previews.swift in Sources */,
+				911BD3002C33367700AA15A0 /* ApplicationSwitcher.swift in Sources */,
 				913CAF152C32F4610008EF1A /* TabBarView.swift in Sources */,
 				916B49C92C3004F2006E06B0 /* FontNames.swift in Sources */,
 			);

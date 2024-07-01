@@ -23,14 +23,11 @@ extension PreviewProvider {
     
     /// Function to get preview data
     static func realmWithData(realm: Realm = emptyRealmInMemory()) -> Realm {
-        let notes = realm.objects(RealmNotes.self)
+        let notes = realm.objects(RealmNote.self)
         if notes.count == 0 {
-            let notes = RealmNotes()
+            var notes = RealmNote()
             
-            for i in 0...9 {
-                notes.notes.append(RealmNote(title: "Mock Title\(i)", message: "Mock message \(i)", shouldOccupyFullWidth: Bool.random(), date: "2024-06-30"))
-            }
-            
+            notes = RealmNote(title: "Mock Title\(1)", message: "Mock message \(1)", shouldOccupyFullWidth: Bool.random(), date: "2024-06-30")
             try? realm.write({
                 realm.add(notes)
             })

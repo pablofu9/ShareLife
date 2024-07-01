@@ -34,14 +34,13 @@ extension Note {
 }
 
 class RealmNote: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var title: String = ""
     @Persisted var message: String = ""
     @Persisted var shouldOccupyFullWidth: Bool = false
     @Persisted var date: String = ""
-    
-    @Persisted(originProperty: "notes") var group: LinkingObjects<RealmNotes>
-    
+    @Persisted var ownerId: String = ""
+
     convenience init(title: String = "", message: String = "", shouldOccupyFullWidth: Bool = false, date: String = "") {
         self.init()
         self.title = title
@@ -52,17 +51,4 @@ class RealmNote: Object, ObjectKeyIdentifiable {
     
 }
 
-class RealmNotes: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var notes = RealmSwift.List<RealmNote>()
-}
 
-extension RealmNote {
-    static var mock: [RealmNote] {
-        return [
-            RealmNote(value: ["title": "Mock Title 1", "message": "Mock message 1", "shouldOccupyFullWidth": false, "date": "2024-06-30"]),
-            RealmNote(value: ["title": "Mock Title 2", "message": "Mock message 2", "shouldOccupyFullWidth": false, "date": "2024-07-01"]),
-            RealmNote(value: ["title": "Mock Title 3", "message": "Mock message 3", "shouldOccupyFullWidth": true, "date": "2024-07-02"])
-        ]
-    }
-}

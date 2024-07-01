@@ -12,8 +12,6 @@ struct NoteRowView: View {
     // MARK: PROPERTIES
     
     var note: RealmNote
-    @EnvironmentObject var realManager: NoteRealManager
-    @Binding var editNote: Bool
     
     // MARK: BODY
     
@@ -53,18 +51,11 @@ extension NoteRowView {
     /// Edit button
     @ViewBuilder
     private var editButton: some View {
-        Button {
-            withAnimation(.snappy) {
-                realManager.selectedNote = note
-                editNote = true
-                
-            }
-        } label: {
-            Image(systemName: "pencil")
-                .resizable()
-                .frame(width: 25, height: 25)
-                .foregroundStyle(Color.black.opacity(0.5))
-        }
+        Image(systemName: "pencil")
+            .resizable()
+            .frame(width: 25, height: 25)
+            .foregroundStyle(Color.black.opacity(0.5))
+        
     }
     
     /// header view
@@ -93,7 +84,4 @@ extension NoteRowView {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
-#Preview {
-    NoteRowView(note: RealmNote.mock.first!, editNote: .constant(false))
-        .environmentObject(NoteRealManager())
-}
+
