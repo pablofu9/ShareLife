@@ -9,35 +9,49 @@ import SwiftUI
 
 struct NotesView: View {
     
-    var notes: [Note]
+    // MARK: PROPERTIES
+    
     @State private var columns: Int = 2
     private var columnGrid: [GridItem] {
         [GridItem(.adaptive(minimum: UIScreen.main.bounds.width / 2.5))]
     }
-    
+    @EnvironmentObject var realmManager: NoteRealManager
     @State private var isWideMode: Bool = false
-    @State var noteOpen: Note?
     @State var openDetail: Bool = false
+    @State var openNewNote: Bool = false
+    @State var editNote: Bool = false
+    @State var selectedNote: RealmNote?
+    
+    @State var half: Bool = false
+    // MARK: BODY
+    
     var body: some View {
         
         NavigationStack {
             ZStack {
-                ScrollView {
-                
-                    LazyVGrid(columns: columnGrid, spacing: 20) {
-                        ForEach(notes) { note in
-                            if note.shouldOccupyFullWidth {
-                                Section {
-                                    
-                                } header: {
-                                    openRowView(note: note)
-                                }
-                            } else {
-                                openRowView(note: note)
+                if realmManager.notes.isEmpty {
+                    
+                    noNotesView
+                } else {
+                    ScrollView {
+                    
+                        LazyVGrid(columns: columnGrid, spacing: 20) {
+                            ForEach(realmManager.notes.filter { !$0.isInvalidated }) { note in
+                                
+                                    if note.shouldOccupyFullWidth {
+                                        Section {
+                                            
+                                        } header: {
+                                            NoteRowView(note: note, editNote: $editNote)
+                                        }
+                                    } else {
+                                        NoteRowView(note: note, editNote: $editNote)
+                                    }
+                                
                             }
                         }
+                        .padding(.horizontal, 10)
                     }
-                    .padding(.horizontal, 10) // Agrega un padding para mejorar la apariencia
                 }
                 VStack {
                     Spacer()
@@ -49,52 +63,35 @@ struct NotesView: View {
                 .padding(.horizontal, 30)
                 .padding(.vertical, 20)
             }
+            .navigationTitle("Notes")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.primaryColor)
         }
-        .overlay {
-            if openDetail {
-                if let selectedNote = noteOpen {
-                    OpenNoteView(note: selectedNote, closeView: $openDetail)
-                        .zIndex(2)
-                        .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .bottom)))
-                }
-            }
-            if openDetail {
-                Color.secondaryColor.opacity(0.5)
-                    .ignoresSafeArea()
-                    .blur(radius: 20)
-                    .zIndex(1)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        withAnimation(.snappy) {
-                            openDetail = false
-                        }
-                    }
-            }
+
+        .sheet(isPresented: $openNewNote) {
+            AddNoteView()
+                .environmentObject(realmManager)
+
         }
+        .sheet(isPresented: $editNote, content: {
+            AddNoteView()
+                .environmentObject(realmManager)
+
+        })
     }
 }
 
 extension NotesView {
     
-    @ViewBuilder
-    private func openRowView(note: Note) -> some View {
-        Button {
-            withAnimation(.snappy) {
-                noteOpen = note
-                openDetail = true
-            }
-        } label: {
-            NoteRowView(note: note)
-        }
-        .buttonStyle(.plain)
-    }
-    
+    // MARK: SUBVIEWS
+    /// Button to add new note
     @ViewBuilder
     private var addNoteButton: some View {
         Button {
-            
+            withAnimation(.snappy) {
+                realmManager.selectedNote = nil
+                openNewNote = true
+            }
         } label: {
             Text("+")
                 .padding()
@@ -103,19 +100,50 @@ extension NotesView {
                 .background(Color.tertiaryColor)
                 .clipShape(Circle())
             
-            
         }
         .buttonStyle(.plain)
         .shadow(
-            color: .white,
+            color: .black,
             radius: 5,
             x: 2,
             y: 2
         )
 
     }
+    
+    /// View to display when there is no notes in the realm db
+    @ViewBuilder
+    private var noNotesView: some View {
+        VStack {
+            Text("No hay notas")
+                .font(.custom(FontNames.kPoppinsSemiBold, size: 25))
+            Text("Crea la primera")
+                .font(.custom(FontNames.kPoppinsRegular, size: 25))
+            Image(systemName: "arrow.down.forward")
+                .resizable()
+                .frame(width: 60, height: 60)
+                .rotationEffect(.init(degrees: 10))
+                .padding(.top, 40)
+                .scaleEffect(half ? 0.8 : 1.0)
+                .animation(.easeInOut(duration: 1.0), value: half)
+                .onAppear {
+                    startAnimation()
+                }
+        }
+    }
 }
 
+extension NotesView {
+    
+    // MARK: PRIVATE FUNCS
+    /// Function to animate arrow
+    private func startAnimation() {
+           Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+               half.toggle()
+           }
+       }
+}
 #Preview {
-    NotesView(notes: Note.mock)
+    NotesView()
+        .environmentObject(NoteRealManager())
 }

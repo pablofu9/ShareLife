@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OpenNoteView: View {
     
-    var note: Note
+    var note: RealmNote
     @Binding var closeView: Bool
     
     var body: some View {
@@ -56,5 +56,5 @@ struct OpenNoteView: View {
 }
 
 #Preview {
-    OpenNoteView(note: Note.mock.first!, closeView: .constant(false))
+    OpenNoteView(note: RealmNote.mock.first!, closeView: .constant(false))
 }

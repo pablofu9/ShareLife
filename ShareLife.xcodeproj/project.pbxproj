@@ -11,7 +11,6 @@
 		914C56742C31596600ABEA7A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C56732C31596600ABEA7A /* Note.swift */; };
 		914C56772C31654200ABEA7A /* OpenNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C56762C31654200ABEA7A /* OpenNoteView.swift */; };
 		916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */; };
-		916B49A62C2FFA67006E06B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49A52C2FFA67006E06B0 /* ContentView.swift */; };
 		916B49A82C2FFA68006E06B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49A72C2FFA68006E06B0 /* Assets.xcassets */; };
 		916B49AB2C2FFA68006E06B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49AA2C2FFA68006E06B0 /* Preview Assets.xcassets */; };
 		916B49B62C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 916B49B52C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig */; };
@@ -40,7 +39,27 @@
 		916B49ED2C300530006E06B0 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49DB2C300530006E06B0 /* Poppins-ExtraBold.ttf */; };
 		916B49EE2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */; };
 		916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49F02C30083E006E06B0 /* View+Utils.swift */; };
+		91EFF3A52C31A5C600D58AD6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 91EFF3A42C31A5C600D58AD6 /* RealmSwift */; };
+		91EFF3A62C31A63300D58AD6 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 91EFF3A42C31A5C600D58AD6 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		91EFF3AB2C31A6D200D58AD6 /* NoteRealManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3AA2C31A6D200D58AD6 /* NoteRealManager.swift */; };
+		91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3AD2C31AC7200D58AD6 /* AddNoteView.swift */; };
+		91EFF3B12C31AD7800D58AD6 /* OvalTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3B02C31AD7800D58AD6 /* OvalTextFieldStyle.swift */; };
+		91EFF3B42C3217B400D58AD6 /* DateTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3B32C3217B400D58AD6 /* DateTimerManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91EFF3A72C31A63300D58AD6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91EFF3A62C31A63300D58AD6 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		914C566F2C31594500ABEA7A /* NoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRowView.swift; sourceTree = "<group>"; };
@@ -48,7 +67,6 @@
 		914C56762C31654200ABEA7A /* OpenNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNoteView.swift; sourceTree = "<group>"; };
 		916B49A02C2FFA67006E06B0 /* ShareLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLifeApp.swift; sourceTree = "<group>"; };
-		916B49A52C2FFA67006E06B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		916B49A72C2FFA68006E06B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		916B49AA2C2FFA68006E06B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		916B49B52C2FFB9E006E06B0 /* ShareLife_Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ShareLife_Dev.xcconfig; sourceTree = "<group>"; };
@@ -78,6 +96,10 @@
 		916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		916B49EF2C3006AF006E06B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		916B49F02C30083E006E06B0 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
+		91EFF3AA2C31A6D200D58AD6 /* NoteRealManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRealManager.swift; sourceTree = "<group>"; };
+		91EFF3AD2C31AC7200D58AD6 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		91EFF3B02C31AD7800D58AD6 /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
+		91EFF3B32C3217B400D58AD6 /* DateTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EFF3A52C31A5C600D58AD6 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,17 +165,18 @@
 		916B49A22C2FFA67006E06B0 /* ShareLife */ = {
 			isa = PBXGroup;
 			children = (
-				914C56712C31594B00ABEA7A /* Model */,
 				916B49A72C2FFA68006E06B0 /* Assets.xcassets */,
 				916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */,
 				916B49B12C2FFB51006E06B0 /* Configuration */,
-				916B49A52C2FFA67006E06B0 /* ContentView.swift */,
 				916B49B92C2FFD4E006E06B0 /* Extensions */,
 				916B49C72C3004E9006E06B0 /* Fonts */,
 				916B49EF2C3006AF006E06B0 /* Info.plist */,
+				91EFF3A82C31A6BD00D58AD6 /* Manager */,
+				914C56712C31594B00ABEA7A /* Model */,
 				916B49A92C2FFA68006E06B0 /* Preview Content */,
 				916B49C02C2FFE2C006E06B0 /* Screens */,
 				916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */,
+				91EFF3AF2C31AD6D00D58AD6 /* Styles */,
 			);
 			path = ShareLife;
 			sourceTree = "<group>";
@@ -211,6 +235,7 @@
 		916B49C42C30040C006E06B0 /* NotesView */ = {
 			isa = PBXGroup;
 			children = (
+				91EFF3AC2C31AC6500D58AD6 /* AddNoteView */,
 				914C56752C31653700ABEA7A /* OpenNoteView */,
 				914C566E2C31593900ABEA7A /* NoteRowView */,
 				916B49C52C300415006E06B0 /* NotesView.swift */,
@@ -252,6 +277,47 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		91EFF3A82C31A6BD00D58AD6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				91EFF3B22C32172400D58AD6 /* DateTimerManager */,
+				91EFF3A92C31A6C300D58AD6 /* NoteRealmManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		91EFF3A92C31A6C300D58AD6 /* NoteRealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				91EFF3AA2C31A6D200D58AD6 /* NoteRealManager.swift */,
+			);
+			path = NoteRealmManager;
+			sourceTree = "<group>";
+		};
+		91EFF3AC2C31AC6500D58AD6 /* AddNoteView */ = {
+			isa = PBXGroup;
+			children = (
+				91EFF3AD2C31AC7200D58AD6 /* AddNoteView.swift */,
+			);
+			path = AddNoteView;
+			sourceTree = "<group>";
+		};
+		91EFF3AF2C31AD6D00D58AD6 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				91EFF3B02C31AD7800D58AD6 /* OvalTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		91EFF3B22C32172400D58AD6 /* DateTimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				91EFF3B32C3217B400D58AD6 /* DateTimerManager.swift */,
+			);
+			path = DateTimerManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,12 +328,16 @@
 				916B499C2C2FFA67006E06B0 /* Sources */,
 				916B499D2C2FFA67006E06B0 /* Frameworks */,
 				916B499E2C2FFA67006E06B0 /* Resources */,
+				91EFF3A72C31A63300D58AD6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ShareLife;
+			packageProductDependencies = (
+				91EFF3A42C31A5C600D58AD6 /* RealmSwift */,
+			);
 			productName = ShareLife;
 			productReference = 916B49A02C2FFA67006E06B0 /* ShareLife.app */;
 			productType = "com.apple.product-type.application";
@@ -296,6 +366,9 @@
 				Base,
 			);
 			mainGroup = 916B49972C2FFA67006E06B0;
+			packageReferences = (
+				91EFF3A12C31A5C600D58AD6 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 916B49A12C2FFA67006E06B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -343,13 +416,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				916B49A62C2FFA67006E06B0 /* ContentView.swift in Sources */,
 				916B49C32C2FFE3D006E06B0 /* MainView.swift in Sources */,
 				916B49C62C300415006E06B0 /* NotesView.swift in Sources */,
 				916B49BF2C2FFDCC006E06B0 /* Colors+Utils.swift in Sources */,
 				914C56772C31654200ABEA7A /* OpenNoteView.swift in Sources */,
+				91EFF3B42C3217B400D58AD6 /* DateTimerManager.swift in Sources */,
 				916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */,
+				91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */,
+				91EFF3B12C31AD7800D58AD6 /* OvalTextFieldStyle.swift in Sources */,
 				914C56742C31596600ABEA7A /* Note.swift in Sources */,
+				91EFF3AB2C31A6D200D58AD6 /* NoteRealManager.swift in Sources */,
 				914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */,
 				916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */,
 				916B49C92C3004F2006E06B0 /* FontNames.swift in Sources */,
@@ -572,6 +648,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91EFF3A12C31A5C600D58AD6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91EFF3A42C31A5C600D58AD6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91EFF3A12C31A5C600D58AD6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 916B49982C2FFA67006E06B0 /* Project object */;
 }

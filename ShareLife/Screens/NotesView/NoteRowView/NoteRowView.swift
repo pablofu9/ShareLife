@@ -9,20 +9,18 @@ import SwiftUI
 
 struct NoteRowView: View {
     
-    var note: Note
+    // MARK: PROPERTIES
+    
+    var note: RealmNote
+    @EnvironmentObject var realManager: NoteRealManager
+    @Binding var editNote: Bool
+    
+    // MARK: BODY
     
     var body: some View {
         VStack {
-            Text(note.date)
-                .font(.custom(FontNames.kPoppinsThin, size: 20))
-                .frame(maxWidth: .infinity, alignment: .leading)
-            Text(note.title)
-                .font(.custom(FontNames.kPoppinsBold, size: 30))
-                .frame(maxWidth: .infinity, alignment: .leading)
-            Text(note.message)
-                .font(.custom(FontNames.kPoppinsRegular, size: 15))
-                .frame(maxWidth: .infinity, alignment: .leading)
-
+            headerView
+            bodyView
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -30,7 +28,7 @@ struct NoteRowView: View {
         .background {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .strokeBorder(
-                    Color.tertiary.opacity(0.65),
+                    Color.tertiaryColor.opacity(0.65),
                     lineWidth: 1
                 )
         }
@@ -39,7 +37,7 @@ struct NoteRowView: View {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
         )
         .shadow(
-            color: .black.opacity(0.5),
+            color: .black.opacity(0.8),
             radius: 2,
             x: 2,
             y: 2
@@ -50,6 +48,52 @@ struct NoteRowView: View {
     }
 }
 
+extension NoteRowView {
+    
+    // MARK: SUBVIEWS
+    /// Edit button
+    @ViewBuilder
+    private var editButton: some View {
+        Button {
+            withAnimation(.snappy) {
+                realManager.selectedNote = note
+                editNote = true
+                
+            }
+        } label: {
+            Image(systemName: "pencil")
+                .resizable()
+                .frame(width: 25, height: 25)
+                .foregroundStyle(Color.black.opacity(0.5))
+        }
+    }
+    
+    /// header view
+    @ViewBuilder
+    private var headerView: some View {
+        HStack(spacing: 20) {
+            Text(note.title)
+                .font(.custom(FontNames.kPoppinsBold, size: 30))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .minimumScaleFactor(0.5)
+            Spacer()
+            editButton
+                .offset(y: -10)
+        }
+    }
+    
+    /// Body view
+    @ViewBuilder
+    private var bodyView: some View {
+        Text(note.date)
+            .font(.custom(FontNames.kPoppinsThin, size: 20))
+            .frame(maxWidth: .infinity, alignment: .leading)
+        Text(note.message)
+            .font(.custom(FontNames.kPoppinsRegular, size: 15))
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
 #Preview {
-    NoteRowView(note: Note.mock.first!)
+    NoteRowView(note: RealmNote.mock.first!, editNote: .constant(false))
+        .environmentObject(NoteRealManager())
 }
