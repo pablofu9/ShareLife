@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		913CAF0E2C32A9EB0008EF1A /* Realm+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF0D2C32A9EB0008EF1A /* Realm+Previews.swift */; };
+		913CAF112C32F4210008EF1A /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF102C32F4210008EF1A /* TabBarManager.swift */; };
+		913CAF152C32F4610008EF1A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF142C32F4610008EF1A /* TabBarView.swift */; };
+		913CAF182C32F4900008EF1A /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF172C32F4900008EF1A /* TabItems.swift */; };
+		913CAF1A2C32F5910008EF1A /* TabBarIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF192C32F5910008EF1A /* TabBarIconView.swift */; };
 		914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C566F2C31594500ABEA7A /* NoteRowView.swift */; };
 		914C56742C31596600ABEA7A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C56732C31596600ABEA7A /* Note.swift */; };
-		914C56772C31654200ABEA7A /* OpenNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C56762C31654200ABEA7A /* OpenNoteView.swift */; };
 		916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */; };
 		916B49A82C2FFA68006E06B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49A72C2FFA68006E06B0 /* Assets.xcassets */; };
 		916B49AB2C2FFA68006E06B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49AA2C2FFA68006E06B0 /* Preview Assets.xcassets */; };
@@ -62,9 +66,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		913CAF0D2C32A9EB0008EF1A /* Realm+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Previews.swift"; sourceTree = "<group>"; };
+		913CAF102C32F4210008EF1A /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		913CAF142C32F4610008EF1A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		913CAF172C32F4900008EF1A /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
+		913CAF192C32F5910008EF1A /* TabBarIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIconView.swift; sourceTree = "<group>"; };
 		914C566F2C31594500ABEA7A /* NoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRowView.swift; sourceTree = "<group>"; };
 		914C56732C31596600ABEA7A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		914C56762C31654200ABEA7A /* OpenNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNoteView.swift; sourceTree = "<group>"; };
 		916B49A02C2FFA67006E06B0 /* ShareLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLifeApp.swift; sourceTree = "<group>"; };
 		916B49A72C2FFA68006E06B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +122,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913CAF0F2C32F4170008EF1A /* TabBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				913CAF102C32F4210008EF1A /* TabBarManager.swift */,
+			);
+			path = TabBarManager;
+			sourceTree = "<group>";
+		};
+		913CAF122C32F4410008EF1A /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				913CAF132C32F4470008EF1A /* TabBar */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		913CAF132C32F4470008EF1A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				913CAF142C32F4610008EF1A /* TabBarView.swift */,
+				913CAF192C32F5910008EF1A /* TabBarIconView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		913CAF162C32F4810008EF1A /* TabItems */ = {
+			isa = PBXGroup;
+			children = (
+				913CAF172C32F4900008EF1A /* TabItems.swift */,
+			);
+			path = TabItems;
+			sourceTree = "<group>";
+		};
 		914C566E2C31593900ABEA7A /* NoteRowView */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +166,7 @@
 		914C56712C31594B00ABEA7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				913CAF162C32F4810008EF1A /* TabItems */,
 				914C56722C31595D00ABEA7A /* Notes */,
 			);
 			path = Model;
@@ -136,14 +178,6 @@
 				914C56732C31596600ABEA7A /* Note.swift */,
 			);
 			path = Notes;
-			sourceTree = "<group>";
-		};
-		914C56752C31653700ABEA7A /* OpenNoteView */ = {
-			isa = PBXGroup;
-			children = (
-				914C56762C31654200ABEA7A /* OpenNoteView.swift */,
-			);
-			path = OpenNoteView;
 			sourceTree = "<group>";
 		};
 		916B49972C2FFA67006E06B0 = {
@@ -165,6 +199,7 @@
 		916B49A22C2FFA67006E06B0 /* ShareLife */ = {
 			isa = PBXGroup;
 			children = (
+				913CAF122C32F4410008EF1A /* CommonViews */,
 				916B49A72C2FFA68006E06B0 /* Assets.xcassets */,
 				916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */,
 				916B49B12C2FFB51006E06B0 /* Configuration */,
@@ -211,6 +246,7 @@
 			children = (
 				916B49BE2C2FFDCC006E06B0 /* Colors+Utils.swift */,
 				916B49F02C30083E006E06B0 /* View+Utils.swift */,
+				913CAF0D2C32A9EB0008EF1A /* Realm+Previews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				91EFF3AC2C31AC6500D58AD6 /* AddNoteView */,
-				914C56752C31653700ABEA7A /* OpenNoteView */,
 				914C566E2C31593900ABEA7A /* NoteRowView */,
 				916B49C52C300415006E06B0 /* NotesView.swift */,
 			);
@@ -280,6 +315,7 @@
 		91EFF3A82C31A6BD00D58AD6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				913CAF0F2C32F4170008EF1A /* TabBarManager */,
 				91EFF3B22C32172400D58AD6 /* DateTimerManager */,
 				91EFF3A92C31A6C300D58AD6 /* NoteRealmManager */,
 			);
@@ -418,16 +454,20 @@
 			files = (
 				916B49C32C2FFE3D006E06B0 /* MainView.swift in Sources */,
 				916B49C62C300415006E06B0 /* NotesView.swift in Sources */,
+				913CAF182C32F4900008EF1A /* TabItems.swift in Sources */,
 				916B49BF2C2FFDCC006E06B0 /* Colors+Utils.swift in Sources */,
-				914C56772C31654200ABEA7A /* OpenNoteView.swift in Sources */,
 				91EFF3B42C3217B400D58AD6 /* DateTimerManager.swift in Sources */,
 				916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */,
 				91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */,
 				91EFF3B12C31AD7800D58AD6 /* OvalTextFieldStyle.swift in Sources */,
 				914C56742C31596600ABEA7A /* Note.swift in Sources */,
+				913CAF1A2C32F5910008EF1A /* TabBarIconView.swift in Sources */,
 				91EFF3AB2C31A6D200D58AD6 /* NoteRealManager.swift in Sources */,
 				914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */,
 				916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */,
+				913CAF112C32F4210008EF1A /* TabBarManager.swift in Sources */,
+				913CAF0E2C32A9EB0008EF1A /* Realm+Previews.swift in Sources */,
+				913CAF152C32F4610008EF1A /* TabBarView.swift in Sources */,
 				916B49C92C3004F2006E06B0 /* FontNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

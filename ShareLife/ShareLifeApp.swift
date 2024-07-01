@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 @main
-struct ShareLifeApp: App {
+struct ShareLifeApp: SwiftUI.App {
+    var config = Realm.Configuration.defaultConfiguration
+    
+    init() {
+        #if DEBUG
+        config.deleteRealmIfMigrationNeeded = true
+        #endif
+    }
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environment(\.realmConfiguration, config)
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct NotesView: View {
     
@@ -21,37 +22,22 @@ struct NotesView: View {
     @State var openNewNote: Bool = false
     @State var editNote: Bool = false
     @State var selectedNote: RealmNote?
-    
+    @State var search = ""
+    @ObservedRealmObject var realmNotes: RealmNotes
     @State var half: Bool = false
+    
+
     // MARK: BODY
     
     var body: some View {
         
         NavigationStack {
             ZStack {
-                if realmManager.notes.isEmpty {
-                    
+                if realmNotes.notes.isEmpty {
                     noNotesView
                 } else {
-                    ScrollView {
+                    scrollNotesView
                     
-                        LazyVGrid(columns: columnGrid, spacing: 20) {
-                            ForEach(realmManager.notes.filter { !$0.isInvalidated }) { note in
-                                
-                                    if note.shouldOccupyFullWidth {
-                                        Section {
-                                            
-                                        } header: {
-                                            NoteRowView(note: note, editNote: $editNote)
-                                        }
-                                    } else {
-                                        NoteRowView(note: note, editNote: $editNote)
-                                    }
-                                
-                            }
-                        }
-                        .padding(.horizontal, 10)
-                    }
                 }
                 VStack {
                     Spacer()
@@ -61,22 +47,22 @@ struct NotesView: View {
                     }
                 }
                 .padding(.horizontal, 30)
-                .padding(.vertical, 20)
+                .padding(.vertical, 90)
             }
+            .searchable(text: $search)
             .navigationTitle("Notes")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.primaryColor)
+            .background(Color.customWhiteColor)
         }
-
         .sheet(isPresented: $openNewNote) {
-            AddNoteView()
+            AddNoteView(realmNotes: realmNotes)
                 .environmentObject(realmManager)
-
+            
         }
         .sheet(isPresented: $editNote, content: {
-            AddNoteView()
+            AddNoteView(realmNotes: realmNotes)
                 .environmentObject(realmManager)
-
+            
         })
     }
 }
@@ -97,7 +83,7 @@ extension NotesView {
                 .padding()
                 .font(.custom(FontNames.kPoppinsMedium, size: 30))
                 .foregroundColor(Color.white)
-                .background(Color.tertiaryColor)
+                .background(Color.customOrangeColor)
                 .clipShape(Circle())
             
         }
@@ -108,7 +94,7 @@ extension NotesView {
             x: 2,
             y: 2
         )
-
+        
     }
     
     /// View to display when there is no notes in the realm db
@@ -131,6 +117,43 @@ extension NotesView {
                 }
         }
     }
+    
+    /// Scroll notes view
+    @ViewBuilder
+    private var scrollNotesView: some View {
+        ScrollView(showsIndicators: false) {
+            
+            LazyVGrid(columns: columnGrid, spacing: 20) {
+                ForEach(realmNotes.notes) { note in
+                    
+                    if note.shouldOccupyFullWidth {
+                        Section {
+                            
+                        } header: {
+                            NoteRowView(note: note, editNote: $editNote)
+                        }
+                    } else {
+                        NoteRowView(note: note, editNote: $editNote)
+                    }
+                    
+                }
+                
+            }
+            
+            .padding(.horizontal, 10)
+        }
+        .refreshable {
+            
+        }
+        .safeAreaInset(edge: .bottom, content: {
+            Spacer()
+                .frame(height: 85)
+        })
+        .safeAreaInset(edge: .top, content: {
+            Spacer()
+                .frame(height: 10)
+        })
+    }
 }
 
 extension NotesView {
@@ -138,12 +161,18 @@ extension NotesView {
     // MARK: PRIVATE FUNCS
     /// Function to animate arrow
     private func startAnimation() {
-           Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-               half.toggle()
-           }
-       }
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            half.toggle()
+        }
+    }
 }
-#Preview {
-    NotesView()
-        .environmentObject(NoteRealManager())
+
+
+struct NotesView_Previews: PreviewProvider {
+    static var previews: some View {
+        let realm = realmWithData()
+        return NotesView(realmNotes: realm.objects(RealmNotes.self).first!)
+            .environment(\.realm, realm)
+            .environmentObject(NoteRealManager())
+    }
 }

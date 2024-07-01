@@ -6,50 +6,60 @@
 //
 
 import SwiftUI
-
+import RealmSwift
 
 struct MainView: View {
     
-    @State var selectedTab = 0
+    @State var tabOptionPressed: Int = 0
     @StateObject var realmManager = NoteRealManager()
 
+    @ObservedRealmObject var notes = RealmNotes()
+    @ObservedResults(RealmNotes.self) var allNotesGroup
+    @StateObject var mainTabBarManager = TabBarManager<MainTab>()
 
-    
     var body: some View {
-        TabView(selection: $selectedTab) {
-            Group {
-                NotesView()
-                    .environmentObject(realmManager)
-                    .tabItem {
-                        Image(systemName: "note.text")
-                        Text("Notes")
-                    }
-                    .tag(0)
-
-                Text("Second Tab")
-                    .tabItem {
-                        Image(systemName: "2.square.fill")
-                        Text("Second")
-                    }
-                    .tag(1)
-                
-                Text("Third Tab")
-                    .tabItem {
-                        Image(systemName: "3.square.fill")
-                        Text("Third")
-                           
-                    }
-                    .tag(2)
-                  
+        content
+            .onAppear {
+                if allNotesGroup.first == nil {
+                    $allNotesGroup.append(RealmNotes())
+                }
             }
-            .toolbarBackground(.visible, for: .tabBar)
-            .toolbarColorScheme(.light, for: .tabBar)
-            .toolbarBackground(Color.secondaryBlueColor, for: .tabBar)
+                   
+       
+    }
+    
+    @ViewBuilder
+    private var content: some View {
+        ZStack(alignment: .bottom) {
+            getView(tab: tabOptionPressed)
+                .frame(maxHeight: .infinity)
+            Spacer()
+            TabBarView(tabBarManager: mainTabBarManager, tabOptionPressed: $tabOptionPressed)
         }
-        .accentColor(.white)
-        .shadow(color: .black, radius: 20)
+        .frame(maxHeight: .infinity, alignment: .bottom)
+    }
+    
+    @ViewBuilder
+    private func getView(tab: Int) -> some View {
+        switch tab {
+        case 0:
+            if let notes = allNotesGroup.first {
+                
+                NotesView(realmNotes: notes)
+                    .environmentObject(realmManager)
+                
+            }
+        case 1:
+            EmptyView()
+        case 2:
+            EmptyView()
+        default:
+            EmptyView()
+        }
     }
 }
+
+
 
 
 #Preview {

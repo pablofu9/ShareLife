@@ -24,15 +24,14 @@ struct NoteRowView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(height: 150)
         .background {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .strokeBorder(
-                    Color.tertiaryColor.opacity(0.65),
+                    Color.strongGrayColor.opacity(0.65),
                     lineWidth: 1
                 )
         }
-        .background(Color.secondaryColor)
+        .background(Color.customOrangeColor)
         .clipShape(
             RoundedRectangle(cornerRadius: 20, style: .continuous)
         )
@@ -75,6 +74,7 @@ extension NoteRowView {
             Text(note.title)
                 .font(.custom(FontNames.kPoppinsBold, size: 30))
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .lineLimit(2)
                 .minimumScaleFactor(0.5)
             Spacer()
             editButton
