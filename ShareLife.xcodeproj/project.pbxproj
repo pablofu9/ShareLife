@@ -48,6 +48,7 @@
 		916B49ED2C300530006E06B0 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49DB2C300530006E06B0 /* Poppins-ExtraBold.ttf */; };
 		916B49EE2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */; };
 		916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49F02C30083E006E06B0 /* View+Utils.swift */; };
+		91763DE42C33DAD50022E0E7 /* OpenNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91763DE32C33DAD50022E0E7 /* OpenNoteView.swift */; };
 		91EFF3A52C31A5C600D58AD6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 91EFF3A42C31A5C600D58AD6 /* RealmSwift */; };
 		91EFF3A62C31A63300D58AD6 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 91EFF3A42C31A5C600D58AD6 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFF3AD2C31AC7200D58AD6 /* AddNoteView.swift */; };
@@ -113,6 +114,7 @@
 		916B49DC2C300530006E06B0 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		916B49EF2C3006AF006E06B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		916B49F02C30083E006E06B0 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
+		91763DE32C33DAD50022E0E7 /* OpenNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNoteView.swift; sourceTree = "<group>"; };
 		91EFF3AD2C31AC7200D58AD6 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		91EFF3B02C31AD7800D58AD6 /* OvalTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTextFieldStyle.swift; sourceTree = "<group>"; };
 		91EFF3B32C3217B400D58AD6 /* DateTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimerManager.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 		916B49C42C30040C006E06B0 /* NotesView */ = {
 			isa = PBXGroup;
 			children = (
+				91763DE22C33DAC80022E0E7 /* OpenNoteView */,
 				91EFF3AC2C31AC6500D58AD6 /* AddNoteView */,
 				914C566E2C31593900ABEA7A /* NoteRowView */,
 				916B49C52C300415006E06B0 /* NotesView.swift */,
@@ -347,6 +350,14 @@
 				916B49D02C300530006E06B0 /* Poppins-ThinItalic.ttf */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		91763DE22C33DAC80022E0E7 /* OpenNoteView */ = {
+			isa = PBXGroup;
+			children = (
+				91763DE32C33DAD50022E0E7 /* OpenNoteView.swift */,
+			);
+			path = OpenNoteView;
 			sourceTree = "<group>";
 		};
 		91EFF3A82C31A6BD00D58AD6 /* Manager */ = {
@@ -488,6 +499,7 @@
 				91EFF3B42C3217B400D58AD6 /* DateTimerManager.swift in Sources */,
 				916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */,
 				91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */,
+				91763DE42C33DAD50022E0E7 /* OpenNoteView.swift in Sources */,
 				91EFF3B12C31AD7800D58AD6 /* OvalTextFieldStyle.swift in Sources */,
 				914C56742C31596600ABEA7A /* Note.swift in Sources */,
 				911BD2FA2C3334E400AA15A0 /* AppConfig.swift in Sources */,

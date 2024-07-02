@@ -51,4 +51,11 @@ class RealmNote: Object, ObjectKeyIdentifiable {
     
 }
 
-
+extension RealmNote {
+    static var mock: [RealmNote] {
+        [
+            RealmNote(title: "Nota 1", message: "Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1  Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1", shouldOccupyFullWidth: true, date: "20-10-2020"),
+            RealmNote(title: "Nota 1", message: "Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1  Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1 Mensaje nota 1", shouldOccupyFullWidth: true, date: "20-10-2020"),
+        ]
+    }
+}

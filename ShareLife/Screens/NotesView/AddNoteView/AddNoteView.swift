@@ -16,7 +16,9 @@ struct AddNoteView: View {
     @State var user: User
     @ObservedResults(RealmNote.self) var notes
     // Create a new Realm Item object.
-    var note: RealmNote? 
+    
+    var note: RealmNote?
+  
     
     @State private var newNote = RealmNote()
     var body: some View {
@@ -123,17 +125,10 @@ extension AddNoteView {
     
     private func updateNote(selectedNote: RealmNote) {
         withAnimation(.snappy) {
-                if let noteToModify = notes.first(where: { $0.id == selectedNote.id }) {
-                    noteToModify.thaw()?.title = title
-                    noteToModify.thaw()?.message = message
-                    noteToModify.thaw()?.date = DateTimeManager.shared.getCurrentDate()
-                    noteToModify.thaw()?.shouldOccupyFullWidth = message.count > 30 ? true : false
-                    notes.realm?.add(noteToModify, update: .modified)
-                }
-                dismiss()
-            }
-            dismiss()
-        
+            deleteNote()
+            addNewNote()
+        }
+        dismiss()
     }
 
     

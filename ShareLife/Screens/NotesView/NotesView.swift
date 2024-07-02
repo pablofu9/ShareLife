@@ -54,17 +54,22 @@ struct NotesView: View {
             .navigationTitle("Notes")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.customWhiteColor)
+            
+        }
+        .overlay {
+            if let selectedNote = selectedNote, editNote {
+                OpenNoteView(note: selectedNote, openView: $editNote)
+                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+                    .scaleEffect(editNote ? 1 : 0.5, anchor: .center)
+                    .animation(.easeInOut(duration: 0.5), value: editNote)
+
+
+            }
         }
         .sheet(isPresented: $openNewNote) {
             AddNoteView(user: user)
             
         }
-        .sheet(isPresented: $editNote, content: {
-            if let selectedNote = selectedNote {
-                AddNoteView(user: user, note: selectedNote)
-            }
-            
-        })
     }
 }
 
@@ -132,21 +137,24 @@ extension NotesView {
                             
                         } header: {
                             NoteRowView(note: note)
-                                .onTapGesture {
-                                    DispatchQueue.main.async {
-                                        
-                                        editNote = true
-                                        selectedNote = note
-                                    }
+                               
+                        }
+                        .onTapGesture {
+                            DispatchQueue.main.async {
+                                withAnimation(.snappy) {
+                                    editNote = true
+                                    selectedNote = note
                                 }
+                            }
                         }
                     } else {
                         NoteRowView(note: note)
                             .onTapGesture {
                                 DispatchQueue.main.async {
-                                    
-                                    editNote = true
-                                    selectedNote = note
+                                    withAnimation(.snappy) {
+                                        editNote = true
+                                        selectedNote = note
+                                    }
                                 }
                             }
                     }
