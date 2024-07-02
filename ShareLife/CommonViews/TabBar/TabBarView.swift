@@ -20,7 +20,6 @@ struct TabBarView<Tab: TabProtocol>: View where Tab.AllCases == Array<Tab> {
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .top) {
-            //Color.red
             HStack(spacing: 0) {
                 let enumerated = Array(zip(tabBarManager.tabs.indices, tabBarManager.tabs))
                 ForEach(enumerated, id: \.1) { index, tab in
@@ -37,7 +36,7 @@ struct TabBarView<Tab: TabProtocol>: View where Tab.AllCases == Array<Tab> {
         }
         .frame(maxHeight: 60)
         .background(Color.customBrownColor)
-        .clipShape(RoundedRectangle(cornerRadius: 15))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
         .shadow(
@@ -46,6 +45,7 @@ struct TabBarView<Tab: TabProtocol>: View where Tab.AllCases == Array<Tab> {
             x: 0,
             y: 0
         )
+       
     }
 }
 

@@ -7,6 +7,11 @@
 
 import SwiftUI
 import RealmSwift
+import Realm
+
+enum Sort {
+    case date, alph
+}
 
 struct NotesView: View {
     
@@ -26,6 +31,25 @@ struct NotesView: View {
     @State var half: Bool = false
     @ObservedResults(RealmNote.self, sortDescriptor: SortDescriptor(keyPath: "_id", ascending: true)) var notes
     @State var user: User
+    @State private var sort: Sort = .date
+
+    
+    private var sortedFilteredNotes: [RealmNote] {
+        let filtered = search.isEmpty ? notes : notes.filter("title CONTAINS[c] %@ OR message CONTAINS[c] %@", search, search)
+        if sort == .date {
+            return filtered.sorted { note1, note2 in
+                guard let date1 = DateTimeManager.shared.formatToDate(date: note1.date), let date2 =  DateTimeManager.shared.formatToDate(date: note2.date) else {
+                    return false
+                }
+                return date1 > date2
+            }
+        } else {
+            return filtered.sorted { note1, note2 in
+                // Order alphabetically by title
+                return note1.title < note2.title
+            }        }
+        
+    }
 
 
     // MARK: BODY
@@ -49,6 +73,32 @@ struct NotesView: View {
                 }
                 .padding(.horizontal, 30)
                 .padding(.vertical, 90)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        
+                        Section() {
+                            Text("Sort")
+                            Picker(selection: $sort) {
+                                Label("Date", systemImage: "calendar").tag(Sort.date)
+                                Label("Alphabetic", systemImage: "character").tag(Sort.alph)
+                            } label: {
+                                Text("Sort by")
+                            }
+                        }
+                    } label: {
+                        HStack {
+                            Text("Sort by")
+                                .font(.custom(FontNames.kPoppinsRegular, size: 18))
+                                .foregroundStyle(.black)
+                            Image(systemName: "ellipsis")
+                                .symbolVariant(.circle)
+                                .font(.title2)
+                        }
+                    }
+                    .accentColor(.black)
+                }
             }
             .searchable(text: $search)
             .navigationTitle("Notes")
@@ -130,7 +180,7 @@ extension NotesView {
         ScrollView(showsIndicators: false) {
             
             LazyVGrid(columns: columnGrid, spacing: 20) {
-                ForEach(notes, id: \.self) { note in
+                ForEach(sortedFilteredNotes, id: \.self) { note in
                     
                     if note.shouldOccupyFullWidth {
                         Section {
@@ -189,4 +239,5 @@ extension NotesView {
         }
     }
 }
+
 

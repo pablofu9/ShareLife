@@ -21,7 +21,7 @@ class DateTimeManager {
     
     func formatToDate(date: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         dateFormatter.timeZone = TimeZone(identifier: "Europe/Madrid")
         
         let result = dateFormatter.date(from: date)
