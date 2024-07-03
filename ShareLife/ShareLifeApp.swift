@@ -36,6 +36,7 @@ final class ErrorHandler: ObservableObject {
         // Sync Manager listens for sync errors.
         app.syncManager.errorHandler = { syncError, syncSession in
             self.error = syncError
+            
         }
     }
 }

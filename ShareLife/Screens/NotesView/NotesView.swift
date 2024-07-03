@@ -104,7 +104,15 @@ struct NotesView: View {
             .navigationTitle("Notes")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.customWhiteColor)
-            
+//            .onChange(of: notes) { oldValue, newValue in
+//                if newValue.count < oldValue.count {
+//                    NotificationManager.shared.sendLocalNotification(title: "Nota borrada", body: "\(user.id) ha borrado una nota")
+//                } else if newValue.count > oldValue.count{
+//                    NotificationManager.shared.sendLocalNotification(title: "Nota añadida", body: "\(user.id) ha añadido una nota")
+//                } else {
+//                    NotificationManager.shared.sendLocalNotification(title: "Nota modificada", body: "\(user.id) ha modificado una nota")
+//                }
+//            }
         }
         .overlay {
             if let selectedNote = selectedNote, editNote {
@@ -112,13 +120,15 @@ struct NotesView: View {
                     .transition(.asymmetric(insertion: .scale, removal: .opacity))
                     .scaleEffect(editNote ? 1 : 0.5, anchor: .center)
                     .animation(.easeInOut(duration: 0.5), value: editNote)
-
-
             }
         }
         .sheet(isPresented: $openNewNote) {
             AddNoteView(user: user)
-            
+        }
+        .onAppear {
+            if NotificationManager.shared.authorizationStatus != .authorized {
+                NotificationManager.shared.requestNotificationPermission()
+            }
         }
     }
 }

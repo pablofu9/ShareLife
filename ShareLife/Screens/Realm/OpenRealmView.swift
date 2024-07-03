@@ -24,23 +24,23 @@ struct OpenRealmView: View {
         case .connecting:
             // Starting the Realm.autoOpen process.
             // Show a progress view.
-            ProgressView()
+           LoadingView()
         case .waitingForUser:
             // Waiting for a user to be logged in before executing
             // Realm.asyncOpen.
-            ProgressView("Waiting for user to log in...")
+            LoadingView()
         case .open(_):
 
             MainView(user: user)
 
-        case .progress(let progress):
+        case .progress(_):
             // The realm is currently being downloaded from the server.
             // Show a progress view.
-            ProgressView(progress)
-        case .error(let error):
+            LoadingView()
+        case .error(_):
             // Opening the Realm failed.
             // Show an error view.
-            ProgressView(error.localizedDescription)
+            LoadingView()
         }
     }
 }

@@ -28,24 +28,8 @@ struct ApplicationSwitcher: View {
                 .environment(\.realmConfiguration, config)
         } else {
 
-            Button {
-                Task {
-                    await login()
-                }
-            } label: {
-                Text("Log in")
-            }
+            LoginView(app: app)
         }
     }
     
-    /// Logs in with an existing user.
-    func login() async {
-        do {
-            let user = try await app.login(credentials: .anonymous)
-            print("Successfully logged in user: \(user)")
-        } catch {
-            print("Failed to log in user: \(error.localizedDescription)")
-            errorHandler.error = error
-        }
-    }
 }

@@ -38,7 +38,7 @@ struct TabBarView<Tab: TabProtocol>: View where Tab.AllCases == Array<Tab> {
         .background(Color.customBrownColor)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .padding(.horizontal, 12)
-        .padding(.vertical, 10)
+        .padding(.top, -10)
         .shadow(
             color: .black.opacity(0.8),
             radius: 5,

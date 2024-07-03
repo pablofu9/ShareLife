@@ -19,6 +19,15 @@
 		913CAF1A2C32F5910008EF1A /* TabBarIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CAF192C32F5910008EF1A /* TabBarIconView.swift */; };
 		914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C566F2C31594500ABEA7A /* NoteRowView.swift */; };
 		914C56742C31596600ABEA7A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C56732C31596600ABEA7A /* Note.swift */; };
+		916021C32C35330400B0DF28 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916021C22C35330400B0DF28 /* Spending.swift */; };
+		916021C62C35396400B0DF28 /* SpendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916021C52C35396400B0DF28 /* SpendingView.swift */; };
+		916021C92C35397E00B0DF28 /* SpedingCategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916021C82C35397E00B0DF28 /* SpedingCategoryRowView.swift */; };
+		916021CC2C35401100B0DF28 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916021CB2C35401100B0DF28 /* NotificationManager.swift */; };
+		916021CF2C35491F00B0DF28 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916021CE2C35491F00B0DF28 /* LoginView.swift */; };
+		916021D22C354C7000B0DF28 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 916021D12C354C7000B0DF28 /* Lottie */; };
+		916021D52C354C9000B0DF28 /* bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 916021D42C354C9000B0DF28 /* bg.json */; };
+		916021D72C35537E00B0DF28 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 916021D62C35537E00B0DF28 /* loading.json */; };
+		916021DA2C35539600B0DF28 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916021D92C35539600B0DF28 /* LoadingView.swift */; };
 		916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */; };
 		916B49A82C2FFA68006E06B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49A72C2FFA68006E06B0 /* Assets.xcassets */; };
 		916B49AB2C2FFA68006E06B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916B49AA2C2FFA68006E06B0 /* Preview Assets.xcassets */; };
@@ -83,6 +92,14 @@
 		913CAF192C32F5910008EF1A /* TabBarIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIconView.swift; sourceTree = "<group>"; };
 		914C566F2C31594500ABEA7A /* NoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRowView.swift; sourceTree = "<group>"; };
 		914C56732C31596600ABEA7A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		916021C22C35330400B0DF28 /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
+		916021C52C35396400B0DF28 /* SpendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingView.swift; sourceTree = "<group>"; };
+		916021C82C35397E00B0DF28 /* SpedingCategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpedingCategoryRowView.swift; sourceTree = "<group>"; };
+		916021CB2C35401100B0DF28 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		916021CE2C35491F00B0DF28 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		916021D42C354C9000B0DF28 /* bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bg.json; sourceTree = "<group>"; };
+		916021D62C35537E00B0DF28 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		916021D92C35539600B0DF28 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		916B49A02C2FFA67006E06B0 /* ShareLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLifeApp.swift; sourceTree = "<group>"; };
 		916B49A72C2FFA68006E06B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91EFF3A52C31A5C600D58AD6 /* RealmSwift in Frameworks */,
+				916021D22C354C7000B0DF28 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +185,7 @@
 		913CAF122C32F4410008EF1A /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				916021D82C35538A00B0DF28 /* LoadingView */,
 				913CAF132C32F4470008EF1A /* TabBar */,
 			);
 			path = CommonViews;
@@ -200,6 +219,7 @@
 		914C56712C31594B00ABEA7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				916021C12C3532F500B0DF28 /* Spendings */,
 				913CAF162C32F4810008EF1A /* TabItems */,
 				914C56722C31595D00ABEA7A /* Notes */,
 			);
@@ -212,6 +232,64 @@
 				914C56732C31596600ABEA7A /* Note.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		916021C12C3532F500B0DF28 /* Spendings */ = {
+			isa = PBXGroup;
+			children = (
+				916021C22C35330400B0DF28 /* Spending.swift */,
+			);
+			path = Spendings;
+			sourceTree = "<group>";
+		};
+		916021C42C35395000B0DF28 /* SpedingViews */ = {
+			isa = PBXGroup;
+			children = (
+				916021C72C35396C00B0DF28 /* SpendingCategoryRow */,
+				916021C52C35396400B0DF28 /* SpendingView.swift */,
+			);
+			path = SpedingViews;
+			sourceTree = "<group>";
+		};
+		916021C72C35396C00B0DF28 /* SpendingCategoryRow */ = {
+			isa = PBXGroup;
+			children = (
+				916021C82C35397E00B0DF28 /* SpedingCategoryRowView.swift */,
+			);
+			path = SpendingCategoryRow;
+			sourceTree = "<group>";
+		};
+		916021CA2C35400400B0DF28 /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				916021CB2C35401100B0DF28 /* NotificationManager.swift */,
+			);
+			path = NotificationManager;
+			sourceTree = "<group>";
+		};
+		916021CD2C35491400B0DF28 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				916021CE2C35491F00B0DF28 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		916021D32C354C7400B0DF28 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				916021D62C35537E00B0DF28 /* loading.json */,
+				916021D42C354C9000B0DF28 /* bg.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
+		916021D82C35538A00B0DF28 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				916021D92C35539600B0DF28 /* LoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		916B49972C2FFA67006E06B0 = {
@@ -233,11 +311,12 @@
 		916B49A22C2FFA67006E06B0 /* ShareLife */ = {
 			isa = PBXGroup;
 			children = (
-				911BD3012C33369600AA15A0 /* Utils */,
-				911BD2F72C33342A00AA15A0 /* atlasConfig.plist */,
-				913CAF122C32F4410008EF1A /* CommonViews */,
+				916021D32C354C7400B0DF28 /* Lotties */,
+				911BD2F92C3334E400AA15A0 /* AppConfig.swift */,
 				916B49A72C2FFA68006E06B0 /* Assets.xcassets */,
+				911BD2F72C33342A00AA15A0 /* atlasConfig.plist */,
 				916B49BC2C2FFDB2006E06B0 /* Colors.xcassets */,
+				913CAF122C32F4410008EF1A /* CommonViews */,
 				916B49B12C2FFB51006E06B0 /* Configuration */,
 				916B49B92C2FFD4E006E06B0 /* Extensions */,
 				916B49C72C3004E9006E06B0 /* Fonts */,
@@ -248,7 +327,7 @@
 				916B49C02C2FFE2C006E06B0 /* Screens */,
 				916B49A32C2FFA67006E06B0 /* ShareLifeApp.swift */,
 				91EFF3AF2C31AD6D00D58AD6 /* Styles */,
-				911BD2F92C3334E400AA15A0 /* AppConfig.swift */,
+				911BD3012C33369600AA15A0 /* Utils */,
 			);
 			path = ShareLife;
 			sourceTree = "<group>";
@@ -291,6 +370,8 @@
 		916B49C02C2FFE2C006E06B0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				916021CD2C35491400B0DF28 /* LoginView */,
+				916021C42C35395000B0DF28 /* SpedingViews */,
 				911BD2FE2C33366A00AA15A0 /* ApplicationSwitcher */,
 				911BD2FB2C33361D00AA15A0 /* Realm */,
 				916B49C42C30040C006E06B0 /* NotesView */,
@@ -363,6 +444,7 @@
 		91EFF3A82C31A6BD00D58AD6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				916021CA2C35400400B0DF28 /* NotificationManager */,
 				913CAF0F2C32F4170008EF1A /* TabBarManager */,
 				91EFF3B22C32172400D58AD6 /* DateTimerManager */,
 			);
@@ -412,6 +494,7 @@
 			name = ShareLife;
 			packageProductDependencies = (
 				91EFF3A42C31A5C600D58AD6 /* RealmSwift */,
+				916021D12C354C7000B0DF28 /* Lottie */,
 			);
 			productName = ShareLife;
 			productReference = 916B49A02C2FFA67006E06B0 /* ShareLife.app */;
@@ -443,6 +526,7 @@
 			mainGroup = 916B49972C2FFA67006E06B0;
 			packageReferences = (
 				91EFF3A12C31A5C600D58AD6 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				916021D02C354C7000B0DF28 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 916B49A12C2FFA67006E06B0 /* Products */;
 			projectDirPath = "";
@@ -464,6 +548,7 @@
 				916B49DD2C300530006E06B0 /* Poppins-ExtraLight.ttf in Resources */,
 				916B49EA2C300530006E06B0 /* Poppins-MediumItalic.ttf in Resources */,
 				916B49EB2C300530006E06B0 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				916021D72C35537E00B0DF28 /* loading.json in Resources */,
 				916B49BD2C2FFDB2006E06B0 /* Colors.xcassets in Resources */,
 				916B49E32C300530006E06B0 /* Poppins-Regular.ttf in Resources */,
 				916B49E22C300530006E06B0 /* Poppins-ThinItalic.ttf in Resources */,
@@ -474,6 +559,7 @@
 				916B49E62C300530006E06B0 /* Poppins-BlackItalic.ttf in Resources */,
 				916B49DF2C300530006E06B0 /* Poppins-Medium.ttf in Resources */,
 				916B49E42C300530006E06B0 /* Poppins-Bold.ttf in Resources */,
+				916021D52C354C9000B0DF28 /* bg.json in Resources */,
 				916B49E02C300530006E06B0 /* Poppins-SemiBold.ttf in Resources */,
 				916B49E52C300530006E06B0 /* Poppins-Black.ttf in Resources */,
 				916B49ED2C300530006E06B0 /* Poppins-ExtraBold.ttf in Resources */,
@@ -494,23 +580,29 @@
 			files = (
 				916B49C32C2FFE3D006E06B0 /* MainView.swift in Sources */,
 				916B49C62C300415006E06B0 /* NotesView.swift in Sources */,
+				916021C92C35397E00B0DF28 /* SpedingCategoryRowView.swift in Sources */,
 				913CAF182C32F4900008EF1A /* TabItems.swift in Sources */,
 				916B49BF2C2FFDCC006E06B0 /* Colors+Utils.swift in Sources */,
 				91EFF3B42C3217B400D58AD6 /* DateTimerManager.swift in Sources */,
 				916B49F12C30083E006E06B0 /* View+Utils.swift in Sources */,
 				91EFF3AE2C31AC7200D58AD6 /* AddNoteView.swift in Sources */,
+				916021DA2C35539600B0DF28 /* LoadingView.swift in Sources */,
 				91763DE42C33DAD50022E0E7 /* OpenNoteView.swift in Sources */,
 				91EFF3B12C31AD7800D58AD6 /* OvalTextFieldStyle.swift in Sources */,
+				916021CF2C35491F00B0DF28 /* LoginView.swift in Sources */,
 				914C56742C31596600ABEA7A /* Note.swift in Sources */,
 				911BD2FA2C3334E400AA15A0 /* AppConfig.swift in Sources */,
 				911BD2FD2C33362600AA15A0 /* OpenRealmView.swift in Sources */,
 				911BD3032C3336A100AA15A0 /* Constants.swift in Sources */,
+				916021C32C35330400B0DF28 /* Spending.swift in Sources */,
 				913CAF1A2C32F5910008EF1A /* TabBarIconView.swift in Sources */,
+				916021C62C35396400B0DF28 /* SpendingView.swift in Sources */,
 				914C56702C31594500ABEA7A /* NoteRowView.swift in Sources */,
 				916B49A42C2FFA67006E06B0 /* ShareLifeApp.swift in Sources */,
 				913CAF112C32F4210008EF1A /* TabBarManager.swift in Sources */,
 				913CAF0E2C32A9EB0008EF1A /* Realm+Previews.swift in Sources */,
 				911BD3002C33367700AA15A0 /* ApplicationSwitcher.swift in Sources */,
+				916021CC2C35401100B0DF28 /* NotificationManager.swift in Sources */,
 				913CAF152C32F4610008EF1A /* TabBarView.swift in Sources */,
 				916B49C92C3004F2006E06B0 /* FontNames.swift in Sources */,
 			);
@@ -734,6 +826,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		916021D02C354C7000B0DF28 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		91EFF3A12C31A5C600D58AD6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -745,6 +845,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		916021D12C354C7000B0DF28 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 916021D02C354C7000B0DF28 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		91EFF3A42C31A5C600D58AD6 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 91EFF3A12C31A5C600D58AD6 /* XCRemoteSwiftPackageReference "realm-swift" */;
